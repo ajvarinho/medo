@@ -25,7 +25,7 @@ body {
     width: 25rem;
     /* border: 10px solid red;
     overflow: hidden; */
-    top: 0%;
+    top: -20%;
     left: 1%;
     
 }
@@ -35,7 +35,7 @@ body {
 }
 
 
-.start {
+/* .start {
     animation: zoom-in linear infinite 1.5s;
 }
 
@@ -51,22 +51,41 @@ body {
         opacity: 0.1;
         transform: scale(3);
     }
-}
+} */
+
 
 .medo-img {
     position: absolute;
-    /* transition-timing-function: linear; */
-    opacity: 0.1;
-    transform: translateX(-0.1rem) translateY(9.3rem) scale(0.17) rotateZ(-27deg);
+    /* opacity: 0.1; */
+    /* transform: translateX(-0.1rem) translateY(9.3rem) scale(0.17) rotateZ(-27deg); */
 }
 
-.animate {
-    animation: grow linear 5s;
+.medo-img.start {
+    animation: start 3s ease-in infinite, grow 3s ease-in infinite;
+}
+
+.medo-img.fade-in {
+    /* opacity: 0; */
+    animation-delay: 2s;
+    animation: grow 3s ease-in infinite, start 3s ease-in infinite;
+}
+
+@keyframes start {
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        /* transform-origin: 48% 88%; */
+        opacity: 0;
+        transform:translateY(-10rem) scale(3);
+    }
 }
 
 @keyframes grow {
     0% {
-        opacity: 0.1;
+        opacity: 1;
         transform: translateX(-0.1rem) translateY(9.3rem) scale(0.17) rotateZ(-27deg);
     }
 
@@ -74,52 +93,16 @@ body {
         opacity: 0.8;
     }
 
-    75% {
+    95% {
         opacity: 1;
         transform: translateX(0rem) translateY(0rem) scale(1) rotateZ(0deg);
         filter: drop-shadow(0 0 0.75rem rgb(13, 209, 13));
         /* transform-origin: 48% 88%; */
     }
 
-    90% {
-        opacity: 0.2;
-    }
-
-
-    100% {
-        transform-origin: 48% 88%;
-        opacity: 0;
-        transform: scale(3);
-    }
 }
 
   /* transform: translateX(5rem) translateY(24rem) scale(0.18) rotateZ(-27deg); */
   /* transform: translateX(4.9rem) translateY(24.2rem) scale(0.15) rotateZ(-27deg); */
 
-    /* height: 100vh;
-    background-image: url('./img/medo.png');
-    background-repeat: no-repeat;
-    z-index: 2;
-    transform: scale(1.3);
-    transform-origin: 19% 68%;
-    background-position: 12% 94%; */
-    /**/
 
-
-    .horizontal {
-        position: relative;
-        height: 100vh;
-        border: 1em solid;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        /**/
-        display: flex;
-        width: 200vw;
-    }
-
-    .wrap {
-        height: 100%;
-        border: 1rem solid red;
-        width: 50%;
-        background-image: url('./img/medo_bg.png');
-    }
