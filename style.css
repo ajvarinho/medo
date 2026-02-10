@@ -14,8 +14,9 @@ body {
     position: absolute;
     inset: 0;
     /* border: 1rem solid blue; */
-    background-image: url('./img/medo_bg_l.png');
+    background-image: url('./img/spati.png');
     background-size: contain;
+    filter: url('#img-2');
 }
 
 .medo {
@@ -24,8 +25,9 @@ body {
     width: 25rem;
     /* border: 10px solid red;
     overflow: hidden; */
-    top: 34%;
+    top: 0%;
     left: 1%;
+    
 }
 
 .first {
