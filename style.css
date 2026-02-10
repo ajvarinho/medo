@@ -61,7 +61,7 @@ body {
 }
 
 .animate {
-    animation: grow linear 5s;
+    animation: grow linear 5s infinite;
 }
 
 @keyframes grow {
@@ -92,6 +92,8 @@ body {
         transform: scale(3);
     }
 }
+
+
 
   /* transform: translateX(5rem) translateY(24rem) scale(0.18) rotateZ(-27deg); */
   /* transform: translateX(4.9rem) translateY(24.2rem) scale(0.15) rotateZ(-27deg); */
